@@ -102,8 +102,12 @@
   color: white;
 }
 
+.dp00-item:hover > .dp00-item::after {
+  background: url("/src/images/sub-menu-blob.png");
+}
+
 .dp00-item:not(.dp00-item:first-child) {
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .dp00-position-coords {
