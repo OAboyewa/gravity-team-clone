@@ -1,39 +1,7 @@
-import { useEffect, useState } from 'react'
 import './App.css'
+import Slider from '/src/components/Slider.jsx';
 
 function App() {
-  //const [count, setCount] = useState(0);
-
-  /*useEffect(() => {
-    const container = document.getElementById("slider-content-00");
-    const content = container.getElementsByClassName("content-cnt");
-    const element = <div className="content-cnt"></div>;
-    let count, start;
-
-    function step(timestamp) {
-      if (start === undefined) {
-        start = timestamp;
-      }
-
-      const elapsed = timestamp - start;
-      count = (-Math.min(0.01 * elapsed, 70));
-      for(let i = 0; i < content.length; i++) {
-        content[i].style.transform = `translate(${count}px, 0)`;
-      }
-
-      if (count == -70) {
-        content[0].remove();
-        container.append(element);
-      }
-
-      console.log(timestamp);
-
-      requestAnimationFrame(step);
-    }
-
-    requestAnimationFrame(step);
-  }, []);*/
-
   return (
     <>
       {/*TOP SITE NAVIGATION*/}
@@ -46,7 +14,7 @@ function App() {
         <div className="header-navigation-wrp">
           <ul className="header-navigation-cnt">
             <li><a href="">ABOUT US</a></li>
-            <li>
+            <li className="dp-state">
               <a href="">OUR SERVICES</a>
               <div className="dropdown dp00-position-coords">
                 <a className="dp00-item" href="">CRYPTO COIN MARKET MAKING</a>
@@ -57,10 +25,10 @@ function App() {
             <li><a href="">BLOG</a></li>
           </ul>
         </div>
-        <div className="header-contact-nav-cnt">
-          <a href="">GET IN TOUCH</a>
+        <div className="header-contact-nav-cnt dp-state">
+          <a className="dropdown-label" href="">GET IN TOUCH</a>
           <div className="dropdown dp01-position-coords">
-            <span className="dp01-item dp01-label">
+            <span className="dp01-label">
               What Type of Client Are You?
             </span>
             <a className="dp01-item" href="">CRYPTO PROJECT</a>
@@ -87,11 +55,8 @@ function App() {
           <div className="slider-title-wrp">
             <span className="slider-title">TRADING</span>
           </div>
-          <div className="slider-content-cnt" id="slider-content-00">
-          </div>
+          <Slider />
         </div>
-      </div>
-      <div className='test'>
       </div>
     </>
   )
