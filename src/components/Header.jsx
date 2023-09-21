@@ -1,5 +1,5 @@
 
-function Header({}) {
+function Header({topSiteNavigation, ourServicesDP}) {
     return (
         <div className="header-cnt">
             <div className="header-logo-wrp">
@@ -9,16 +9,40 @@ function Header({}) {
             </div>
             <div className="header-navigation-wrp">
             <ul className="header-navigation-cnt">
-                <li><a href="">ABOUT US</a></li>
-                <li className="dp-state">
-                <a className="" href="">OUR SERVICES</a>
-                <div className="dropdown dp00-position-coords">
-                    <a className="dp00-item" href="">CRYPTO COIN MARKET MAKING</a>
-                    <a className="dp00-item" href="">LIQUIDITY FOR CRYPTO EXCHANGES</a>
-                </div>
+                <li>
+                    {topSiteNavigation.hl1 == "active" ? 
+                       <a className="header-item-active" href="">ABOUT US</a> :
+                        <a className="header-item-inactive" href="">ABOUT US</a>
+                    }
                 </li>
-                <li><a href="">WORK WITH US</a></li>
-                <li><a href="">BLOG</a></li>
+                <li className="dp-state">
+                    {topSiteNavigation.hl2 == "active" ? 
+                       <a className="header-item-active" href="">OUR SERVICES</a> :
+                        <a className="header-item-inactive" href="">OUR SERVICES</a>
+                    }
+                    <div className="dropdown dp00-position-coords">
+                        {ourServicesDP.hl1 == "active" ? 
+                            <a className="dp00-item dp-active" href="">CRYPTO COIN MARKET MAKING</a> :
+                            <a className="dp00-item dp-inactive" href="">CRYPTO COIN MARKET MAKING</a>
+                        }
+                        {ourServicesDP.hl2 == "active" ? 
+                            <a className="dp00-item dp-active" href="">LIQUIDITY FOR CRYPTO EXCHANGES</a> :
+                            <a className="dp00-item dp-inactive" href="">LIQUIDITY FOR CRYPTO EXCHANGES</a>
+                        }
+                    </div>
+                </li>
+                <li>
+                    {topSiteNavigation.hl3 == "active" ? 
+                       <a className="header-item-active" href="">WORK WITH US</a> :
+                        <a className="header-item-inactive" href="">WORK WITH US</a>
+                    }
+                </li>
+                <li>
+                    {topSiteNavigation.hl4 == "active" ? 
+                       <a className="header-item-active" href="">BLOG</a> :
+                        <a className="header-item-inactive" href="">BLOG</a>
+                    }
+                </li>
             </ul>
             </div>
             <div className="header-contact-nav-cnt dp-state">

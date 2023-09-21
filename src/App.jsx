@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       {/*TOP SITE NAVIGATION*/}
-      <Header />
+      <Header 
+        topSiteNavigation={{hl1: "inactive", hl2: "inactive", hl3: "inactive", hl4: "inactive"}} 
+        ourServicesDP={{hl1: "inactive", hl2: "inactive"}} />
       {/*HERO*/}
       <div className="hero">
         <h1 className="hero-heading">Balancing Crypto Markets</h1>
