@@ -7,6 +7,7 @@
 :root {
   --bg-colour-00: #141619;
   --bg-colour-01: #5fa4e6;
+  --gradient-00: linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%);
 }
 
 html, body {
